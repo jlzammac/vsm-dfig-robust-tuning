@@ -1,0 +1,33 @@
+# MATLAB / Simulink build artefacts
+slprj/
+sccprj/
+codegen/
+*.slxc
+*.autosave
+*.asv
+*.mex*
+# Backups — never ship
+*.bak.*
+*BACKUP*
+*.PRE_*
+.DS_Store
+# Large outputs: regenerate, do not version
+RESULTS/
+# Exception: the saved control designs are required to reproduce
+# Sections 5 and 6 without re-running the 25 h optimisation.
+!RESULTS/
+!RESULTS/CONTROL/
+!RESULTS/CONTROL/*.mat
+# NOTE: PLOT_FILES holds plotting SCRIPTS, not outputs. Do not ignore it.
+*.mat.large
+
+# Backups and archives — never ship
+BACK_*
+ARCHIVE/
+
+# Run logs. Regenerated on every run and they contain absolute local paths.
+TEMP/*
+!TEMP/.gitkeep
+
+# Outputs written by ANALYSIS/TABLE6_ENDPOINT_MARGINS.m
+RESULTS/CONTROL/TABLE6_ENDPOINT_MARGINS.*
